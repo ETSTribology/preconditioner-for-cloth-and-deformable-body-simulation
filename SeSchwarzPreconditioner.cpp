@@ -1,29 +1,3 @@
-/////////////////////////////////////////////////////////////////////////////////////////////
-//  Copyright (C) 2002 - 2022,
-//  All rights reserved.
-//  Redistribution and use in source and binary forms, with or without
-//  modification, are permitted provided that the following conditions
-//  are met:
-//     1. Redistributions of source code must retain the above copyright
-//        notice, this list of conditions and the following disclaimer.
-//     2. Redistributions in binary form must reproduce the above copyright
-//        notice, this list of conditions and the following disclaimer in the
-//        documentation and/or other materials provided with the distribution.
-//     3. The names of its contributors may not be used to endorse or promote
-//        products derived from this software without specific prior written
-//        permission.
-//  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-//  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-//  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-//  A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
-//  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
-//  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
-//  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
-//  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-//	NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-//	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
 #include "SeSchwarzPreconditioner.h"
 
 #include "SeIntrinsic.h"
@@ -1289,7 +1263,7 @@ void SeSchwarzPreconditioner::PrepareHessian(const SeMatrix3f* diagonal, const S
 					{
 						continue;
 					}
-					if (level <= 1) // °´ÕÕblock·Ö²¢ÐÐ£¬level 1µÄÎ»ÖÃÒ²Ò»¶¨ÊôÓÚ±¾Ïß³Ì
+					if (level <= 1) // ï¿½ï¿½ï¿½ï¿½blockï¿½Ö²ï¿½ï¿½Ð£ï¿½level 1ï¿½ï¿½Î»ï¿½ï¿½Ò²Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ß³ï¿½
 						m_hessian32[otID % bank][myID] += mat;
 					else
 						Intrinsic::AtomicAdd(&m_hessian32[otID % bank][myID], mat);
@@ -1390,7 +1364,7 @@ void SeSchwarzPreconditioner::LDLtInverse512()
 			//	}
 			//}
 
-			// ÏòÏÂÏûÔª
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôª
 #ifdef WIN32
 			for (int x = 0; x < 96; x++)
 			{
