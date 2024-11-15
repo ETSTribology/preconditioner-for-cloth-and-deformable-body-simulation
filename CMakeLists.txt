@@ -41,7 +41,6 @@ set(HEADER_FILES
     SeMorton.h
     SePreDefine.h
     SeSchwarzPreconditioner.h
-    SeSchwarzPreconditionerPreviousVersion.h
     SeUtility.h
     SeVector.h
     SeVectorSimd.h
